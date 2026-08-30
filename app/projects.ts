@@ -106,7 +106,7 @@ const projectCatalog: Project[] = [
         alt: "Chinese New Year 2025 poster sequence",
       },
       {
-        src: "/cases/chinese-new-year-poster/poster-motion-02.mp4",
+        src: "https://raw.githubusercontent.com/sjwsanban-commits/portfolio/c93001486c86c3a4123dddf0adac01f92fbcb9d2/public/cases/chinese-new-year-poster/poster-motion-02.mp4",
         kind: "video",
         alt: "Chinese New Year 2025 poster animation",
       },
