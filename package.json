@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.13.0"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
+    "deploy": "npm rebuild esbuild && npm run build && wrangler deploy --config dist/server/wrangler.json",
+    "deploy:cloudflare": "npm rebuild esbuild && wrangler deploy --config dist/server/wrangler.json",
+    "preview": "npm run build && wrangler dev --config dist/server/wrangler.json",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
