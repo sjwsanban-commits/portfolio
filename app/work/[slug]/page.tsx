@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, getProjectImages, projects } from "../../projects";
 
@@ -40,9 +39,9 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <main className={`case-page case-${project.slug}`}>
       <header className="case-nav">
-        <Link className="mark" href="/" aria-label="Back to Olivia Shi portfolio">OS</Link>
+        <a className="mark" href="/#work" aria-label="Back to selected work">OS</a>
         <span>{String(index + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}</span>
-        <Link href="/#work">Close ×</Link>
+        <a href="/#work" aria-label="Close project and return to selected work">Close ×</a>
       </header>
 
       <section className="case-hero">
